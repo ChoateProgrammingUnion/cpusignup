@@ -1,0 +1,112 @@
+.fullscreen {
+	border: 0px;
+	margin: 0px;
+	width: 100vw;
+	height: 100vh;
+}
+
+.fullwidth {
+	width: 100vw;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.navbutton {
+	display: inline-block;
+}
+
+.navbaricon {
+	font-size: 2em;
+	width: 1.5em;
+	text-align: center;
+	background-color: #ee6e73;
+
+}
+
+.absolutepos {
+	position: absolute;
+}
+
+.stacktop {
+	z-index: 100;
+}
+
+.vouter, .relativepos {
+	position: relative;
+}
+
+.vinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.fullwidth-percent {
+	width: 100%;
+}
+
+.overview-row {
+	&:hover {
+		background-color: #eee !important;
+	}
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.nomargin {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.nopadding {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.removeMember {
+	cursor: pointer;
+	
+	&:hover {
+		transition: 0.3s;
+		color: #ff0000;
+	}
+}
+$break-small: 600px;
+@media screen and (max-width: $break-small) {
+    // styles for small screens and down
+    .signup-container {
+    	width: 90vw;
+    }
+}
+
+@media screen and (min-width: $break-small) {
+	.signup-container {
+		width: 35vw;
+	}
+}
+
+.bodypreview-outer {
+	padding-left: 3em;
+	padding-top: 1.5em;
+}
+
+#bodypreview {
+	padding-bottom: 1.5em;
+	border-bottom: 1px solid #9E9E9E;
+}
+
+.2emtopmargin {
+	margin-top: 2em !important;
+}
+
+.bottomright {
+	position: absolute;
+	bottom: 2em;
+	right: 2em;
+	margin: auto;
+}

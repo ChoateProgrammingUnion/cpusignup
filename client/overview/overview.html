@@ -1,0 +1,40 @@
+<template name="overview">
+	{{> nav}}
+	<br><br>
+	<div class="container">
+		<table class="striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each members}}
+				<tr class="overview-row" data-id="{{_id}}">
+					<td>{{name}}</td>
+					<td>{{email}}</td>
+					<td class="nomargin nopadding"><i class="small mdi-navigation-close hidden removeMember" data-id="{{_id}}"></i></td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+	<div class="absolutepos bottomright js-bottom-pushpin">
+		<a class="btn-floating btn-large waves-effect waves-light red modal-trigger" data-target="exportmemberemails" id="exportemails" data-position="left" data-delay="50" data-tooltip="export email list"><i class="mdi-action-launch"></i></a>
+	</div>
+
+	<!-- export data modal -->
+	<div id="exportmemberemails" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h4>Member emails</h4>
+			<code id="memberemails">{{memberemails}}</code>
+		</div>
+		<div class="modal-footer">
+			<a class="modal-action modal-close waves-effect waves-green btn-flat clickable">Close</a>
+			<a class="waves-effect btn-flat clickable" id="selectall">select all</a>
+			
+		</div>
+	</div>
+</template>

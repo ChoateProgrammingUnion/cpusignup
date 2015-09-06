@@ -1,0 +1,25 @@
+<head>
+	<title>clubcontrol</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<template name="nav">
+	<span class="absolutepos stacktop">
+		{{> sAlert}}
+		<div class="navbutton clickable dropdown-button" data-activates="dropdown1">
+			<i class="mdi-navigation-menu white-text navbaricon hideToggle"></i>
+		</div>
+
+		<!-- dropdown -->
+		<ul id='dropdown1' class='dropdown-content'>
+			<li><a href="{{ pathFor 'overview' }}">overview</a></li>
+			<li><a href="{{ pathFor 'email' }}">email</a></li>
+			<li><a href="{{ pathFor 'signup' }}">signup</a></li>
+			<li class="divider"></li>
+			<li><a class="clickable" id="logout">log out</a></li>
+		</ul>
+
+		{{loginCheck}}
+	</span>
+</template>

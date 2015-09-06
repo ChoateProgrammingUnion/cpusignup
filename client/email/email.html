@@ -1,0 +1,32 @@
+<template name="email">
+	{{> nav}}
+	<br><br>
+	<div class="container">
+		
+		<form id="email">
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="mdi-communication-email prefix"></i>
+					<input id="emailsubject" type="text" class="validate">
+					<label for="emailsubject">subject</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="mdi-action-subject prefix"></i>
+					<textarea id="emailbody" class="materialize-textarea" rows="10"></textarea>
+					<label for="emailbody">markdown enabled body</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="mdi-image-remove-red-eye prefix"></i>
+					<div class="bodypreview-outer">
+						<div id="bodypreview">
+						</div>
+					</div>
+					<label for="bodypreview">body preview</label>
+				</div>
+			</div>
+		</form>
+		<div class="absolutepos bottomright">
+			<a class="btn-floating btn-large waves-effect waves-light red" id="sendemail" data-position="left" data-delay="50" data-tooltip="queue emails for sending"><i class="mdi-content-send"></i></a>
+		</div>
+	</div>
+</template>

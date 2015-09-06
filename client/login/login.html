@@ -1,0 +1,14 @@
+<template name="login">
+	<div class="valign-wrapper fullscreen">
+		<div class="valign fullwidth">
+			<div class="container">
+				{{#if currentUser}}
+				<h1 id="welcome">Welcome back!</h1>
+				{{startTransition}}
+				{{else}}
+				{{> atForm}}
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</template>
